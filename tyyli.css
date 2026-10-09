@@ -1,0 +1,176 @@
+:root {
+  --paperi: #f8f8f8;
+  --muste: #0b0b0b;
+  --harmaa: #5d5d5d;
+  --viiva: #d4d4d4;
+  --turkoosi: #01cdd4;
+  --otsikko: "Bodoni Moda", "Bodoni 72", Didot, serif;
+  --teksti: "Source Serif 4", Georgia, serif;
+  --leveys: 1180px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paperi);
+  color: var(--muste);
+  font: 400 1.125rem/1.6 var(--teksti);
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+h1, h2, h3 { font-family: var(--otsikko); font-weight: 700; line-height: 1.05; margin: 0; }
+p { margin: 0 0 1em; }
+
+.sisalto { max-width: var(--leveys); margin: 0 auto; padding: 0 24px; }
+.pieni {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Yläpalkki */
+.ylapalkki {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 24px;
+  padding-top: 22px; padding-bottom: 22px;
+}
+.ylapalkki .nimi { font-family: var(--otsikko); font-size: 1.15rem; font-weight: 700; text-decoration: none; }
+.ylapalkki nav { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.ylapalkki nav a { text-decoration: none; }
+.ylapalkki nav a:hover { text-decoration: underline; }
+.ylapalkki nav .kieli { border-left: 1px solid var(--muste); padding-left: 22px; }
+
+/* Avaus */
+.avaus {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.78fr); gap: 56px; align-items: end;
+  padding-top: 24px;
+}
+.avaus h1 {
+  font-size: clamp(3.2rem, 7.3vw, 7.4rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 0.88;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.avaus .titteli { font-family: var(--otsikko); font-style: italic; font-size: 1.5rem; margin-bottom: 20px; }
+.avaus .ingressi { font-size: 1.3rem; max-width: 34em; padding-bottom: 56px; }
+.avaus figure { margin: 0; position: relative; }
+.avaus figcaption {
+  position: absolute; right: -18px; bottom: 0;
+  writing-mode: vertical-rl; transform: rotate(180deg);
+  font-size: 0.72rem; letter-spacing: 0.1em; color: var(--harmaa);
+}
+.avaus figcaption a { text-decoration: none; }
+
+/* Sitaatti */
+.sitaatti { background: var(--turkoosi); padding: 88px 0; }
+.sitaatti blockquote {
+  margin: 0; max-width: 21em;
+  font-family: var(--otsikko); font-style: italic; font-weight: 500;
+  font-size: clamp(1.7rem, 3.4vw, 2.9rem); line-height: 1.18;
+}
+.sitaatti cite { display: block; margin-top: 24px; font-style: normal; }
+
+/* Musta osio */
+.musta { background: var(--muste); color: var(--paperi); padding: 104px 0; }
+.musta a { color: var(--paperi); }
+.kirja-esittely { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 72px; align-items: center; }
+.kirja-esittely h2 { font-size: clamp(3rem, 6.5vw, 5.5rem); text-transform: uppercase; font-weight: 800; }
+.kirja-esittely .alaotsikko { font-family: var(--otsikko); font-style: italic; font-size: 1.5rem; margin: 10px 0 32px; }
+.kirja-esittely .pieni { color: var(--turkoosi); margin-bottom: 18px; }
+.korostus { color: var(--turkoosi); }
+
+/* Tavalliset osiot */
+.osio { padding: 104px 0; }
+.osio + .osio { border-top: 1px solid var(--muste); }
+.osio > .sisalto > h2 { font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 24px; }
+.johdanto { font-size: 1.3rem; max-width: 36em; margin-bottom: 56px; }
+
+.kannet { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+.kannet a { text-decoration: none; }
+.kannet img { aspect-ratio: 3 / 4; object-fit: cover; width: 100%; background: #e9e9e9; transition: transform 0.25s; }
+.kannet a:hover img { transform: translateY(-6px); }
+.kannet h3 { font-size: 1.25rem; margin-top: 16px; }
+.kannet .vuosi { color: var(--harmaa); font-size: 0.95rem; }
+.suoraan { margin-top: 48px; font-size: 1.2rem; }
+
+.opas { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 72px; align-items: center; }
+.opas h2 { font-size: clamp(2rem, 4vw, 3.2rem); margin: 12px 0 24px; }
+.nappi {
+  display: inline-block; margin-top: 12px; padding: 14px 26px;
+  background: var(--muste); color: var(--paperi); text-decoration: none;
+  letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.85rem;
+}
+.nappi:hover { background: var(--turkoosi); color: var(--muste); }
+
+/* Kuka */
+.kuka .nosto { font-family: var(--otsikko); font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.22; max-width: 24em; margin-bottom: 56px; }
+.palstat { columns: 2; column-gap: 56px; }
+.palstat p { break-inside: avoid; }
+
+.pilvet { height: min(62vw, 640px); background: url(kuvat/pilvet.jpg) center / cover no-repeat; }
+
+/* Puhujana */
+.teemat { list-style: none; margin: 0 0 96px; padding: 0; border-top: 1px solid var(--muste); }
+.teemat li { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 48px; padding: 30px 0; border-bottom: 1px solid var(--viiva); }
+.teemat h3 { font-size: 1.6rem; }
+.teemat p { margin: 0; }
+
+.nuoret { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 64px; align-items: center; margin-bottom: 96px; }
+.nuoret h3 { font-size: 2rem; margin-bottom: 20px; }
+
+.kaksi { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
+.kaksi h3 { font-size: 1.6rem; margin-bottom: 24px; }
+.luennot { list-style: none; margin: 0; padding: 0; }
+.luennot li { padding: 12px 0; border-bottom: 1px solid var(--viiva); }
+.palaute p { font-family: var(--otsikko); font-style: italic; font-size: 1.35rem; line-height: 1.3; margin-bottom: 18px; }
+
+/* Yhteys */
+.yhteys { text-align: left; }
+.yhteys h2 { font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 24px; }
+.yhteys .osoite {
+  display: inline-block; margin: 24px 0 16px;
+  font-family: var(--otsikko); font-weight: 700; font-size: clamp(2.2rem, 7vw, 5.5rem);
+  color: var(--turkoosi); text-decoration: none; line-height: 1;
+}
+.yhteys .osoite:hover { text-decoration: underline; text-decoration-thickness: 3px; }
+
+/* Media */
+.media { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--muste); }
+.media li { display: grid; grid-template-columns: 0.32fr 1fr; gap: 40px; padding: 32px 0; border-bottom: 1px solid var(--viiva); }
+.media .lahde { padding-top: 6px; }
+.media h3 { font-size: 1.55rem; margin-bottom: 10px; }
+.media h3 a { text-decoration: none; }
+.media h3 a:hover { text-decoration: underline; }
+.media p { margin: 0; color: #2a2a2a; }
+.media img { margin-top: 18px; max-width: 420px; width: 100%; }
+
+/* Alatunniste */
+footer { background: var(--muste); color: var(--paperi); padding: 64px 0 40px; }
+footer a { color: var(--paperi); }
+.alarivi { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
+.alarivi ul { list-style: none; margin: 0; padding: 0; }
+.alarivi li { margin-bottom: 6px; }
+.alarivi .pieni { color: var(--turkoosi); margin-bottom: 14px; }
+.tekijanoikeus { margin-top: 56px; font-size: 0.85rem; color: #9a9a9a; }
+
+/* Puhelin */
+@media (max-width: 860px) {
+  body { font-size: 1.06rem; }
+  .sisalto { padding: 0 16px; }
+  .ylapalkki { flex-direction: column; gap: 10px; }
+  .ylapalkki nav .kieli { border: 0; padding: 0; }
+  .avaus, .kirja-esittely, .opas, .nuoret, .kaksi { grid-template-columns: 1fr; gap: 40px; }
+  .avaus .ingressi { padding-bottom: 0; }
+  .avaus figcaption { right: 4px; color: #777; }
+  .kirja-esittely img, .opas img { max-width: 300px; }
+  .kannet { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .palstat { columns: 1; }
+  .teemat li, .media li { grid-template-columns: 1fr; gap: 10px; }
+  .alarivi { grid-template-columns: 1fr; }
+  .osio, .musta { padding: 72px 0; }
+  .sitaatti { padding: 64px 0; }
+}
