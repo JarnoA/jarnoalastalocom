@@ -22,6 +22,10 @@ img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
 a:hover { text-decoration-thickness: 2px; }
 h1, h2, h3 { font-family: var(--otsikko); font-weight: 700; line-height: 1.05; margin: 0; }
+/* Bodoni Moda ohentaa hiusviivat isoissa koissa; kiinteä optinen koko pitää ne luettavina */
+h1, h2, h3, .ylapalkki .nimi, .titteli, .sitaatti blockquote, .alaotsikko, .nosto, .palaute p, .yhteys .osoite {
+  font-variation-settings: "opsz" 14;
+}
 p { margin: 0 0 1em; }
 
 .sisalto { max-width: var(--leveys); margin: 0 auto; padding: 0 24px; }
