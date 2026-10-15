@@ -52,15 +52,17 @@ p { margin: 0 0 1em; }
   padding-top: 24px;
 }
 .avaus h1 {
-  font-size: clamp(3.2rem, 7.3vw, 7.4rem);
+  font-size: clamp(3rem, 16.5cqi, 7.4rem);
   font-weight: 800;
   letter-spacing: -0.01em;
   line-height: 0.88;
   text-transform: uppercase;
   margin-bottom: 32px;
 }
+.avaus > div { container-type: inline-size; }
 .avaus .titteli { font-family: var(--otsikko); font-style: italic; font-size: 1.5rem; margin-bottom: 20px; }
-.avaus .ingressi { font-size: 1.3rem; max-width: 34em; padding-bottom: 56px; }
+.avaus .ingressi { font-size: 1.3rem; max-width: 34em; }
+.avaus .nappi { margin: 4px 0 56px; }
 .avaus figure { margin: 0; position: relative; }
 .avaus figcaption {
   position: absolute; right: -18px; bottom: 0;
@@ -129,7 +131,21 @@ p { margin: 0 0 1em; }
 .kaksi { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
 .kaksi h3 { font-size: 1.6rem; margin-bottom: 24px; }
 .luennot { list-style: none; margin: 0; padding: 0; }
-.luennot li { padding: 12px 0; border-bottom: 1px solid var(--viiva); }
+.luennot li { padding: 12px 0; border-bottom: 1px solid var(--viiva); break-inside: avoid; }
+.luennot .pvm { display: inline-block; min-width: 8.5em; font-weight: 600; }
+.esiintymiset h3 { font-size: 1.6rem; margin: 56px 0 16px; }
+.esiintymiset h3:first-child { margin-top: 0; }
+.tulossa li { font-size: 1.2rem; padding: 16px 0; }
+.tulossa .pvm { color: var(--muste); background: var(--turkoosi); padding: 0 8px; margin-right: 10px; min-width: 0; }
+.pidetyt { columns: 2; column-gap: 56px; }
+.palaute { margin-top: 96px; }
+.palaute h3 { font-size: 1.6rem; margin-bottom: 24px; }
+.reitit { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 72px; margin-top: 16px; }
+.reitit .pieni { color: var(--turkoosi); margin-bottom: 14px; }
+.reitit .osoite { margin-top: 8px; font-size: clamp(2rem, 4.6vw, 3.8rem); }
+.nappi-turkoosi { background: var(--turkoosi); color: var(--muste) !important; margin-top: 8px; }
+.nappi-turkoosi:hover { background: var(--paperi); }
+.ylapalkki nav .tilaa-linkki { background: var(--muste); color: var(--paperi); padding: 2px 12px; }
 .palaute p { font-family: var(--otsikko); font-style: italic; font-size: 1.35rem; line-height: 1.3; margin-bottom: 18px; }
 
 /* Yhteys */
@@ -172,9 +188,18 @@ footer a { color: var(--paperi); }
   .avaus figcaption { right: 4px; color: #777; }
   .kirja-esittely img, .opas img { max-width: 300px; }
   .kannet { grid-template-columns: 1fr 1fr; gap: 24px; }
-  .palstat { columns: 1; }
+  .palstat, .pidetyt { columns: 1; }
+  .reitit { grid-template-columns: 1fr; gap: 48px; }
+  .avaus .nappi { margin-bottom: 0; }
   .teemat li, .media li { grid-template-columns: 1fr; gap: 10px; }
   .alarivi { grid-template-columns: 1fr; }
   .osio, .musta { padding: 72px 0; }
   .sitaatti { padding: 64px 0; }
 }
+
+.kenelle { font-size: 1.15rem; border-top: 1px solid var(--muste); padding-top: 18px; margin: -24px 0 56px; max-width: 46em; }
+.kenelle .pieni { display: block; margin-bottom: 6px; color: var(--harmaa); }
+.huomio { color: var(--harmaa); margin: -8px 0 8px; }
+.palaute .palaute-johdanto { font-family: var(--teksti); font-style: normal; font-size: 1.3rem; line-height: 1.6; max-width: 36em; margin-bottom: 40px; font-variation-settings: normal; }
+.tilaa-johdanto { font-size: 1.3rem; max-width: 36em; margin-bottom: 48px; }
+.toimistot { margin-top: 56px; padding-top: 20px; border-top: 1px solid #333; color: #bdbdbd; }
