@@ -181,8 +181,11 @@ footer a { color: var(--paperi); }
 @media (max-width: 860px) {
   body { font-size: 1.06rem; }
   .sisalto { padding: 0 16px; }
-  .ylapalkki { flex-direction: column; gap: 10px; }
-  .ylapalkki nav .kieli { border: 0; padding: 0; }
+  .ylapalkki { flex-direction: column; gap: 6px; padding-bottom: 44px; }
+  .ylapalkki nav { gap: 6px; margin-left: -10px; }
+  .ylapalkki nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; }
+  .ylapalkki nav .kieli { border: 0; padding: 0 10px; }
+  .ylapalkki nav .tilaa-linkki { padding: 0 16px; margin-left: 4px; }
   .avaus, .kirja-esittely, .opas, .nuoret, .kaksi { grid-template-columns: 1fr; gap: 40px; }
   .avaus .ingressi { padding-bottom: 0; }
   .avaus figcaption { right: 4px; color: #777; }
@@ -199,7 +202,6 @@ footer a { color: var(--paperi); }
 
 .kenelle { font-size: 1.15rem; border-top: 1px solid var(--muste); padding-top: 18px; margin: -24px 0 56px; max-width: 46em; }
 .kenelle .pieni { display: block; margin-bottom: 6px; color: var(--harmaa); }
-.huomio { color: var(--harmaa); margin: -8px 0 8px; }
 .palaute .palaute-johdanto { font-family: var(--teksti); font-style: normal; font-size: 1.3rem; line-height: 1.6; max-width: 36em; margin-bottom: 40px; font-variation-settings: normal; }
 .tilaa-johdanto { font-size: 1.3rem; max-width: 36em; margin-bottom: 48px; }
 .toimistot { margin-top: 56px; padding-top: 20px; border-top: 1px solid #333; color: #bdbdbd; }
