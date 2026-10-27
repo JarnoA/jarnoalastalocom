@@ -205,3 +205,9 @@ footer a { color: var(--paperi); }
 .palaute .palaute-johdanto { font-family: var(--teksti); font-style: normal; font-size: 1.3rem; line-height: 1.6; max-width: 36em; margin-bottom: 40px; font-variation-settings: normal; }
 .tilaa-johdanto { font-size: 1.3rem; max-width: 36em; margin-bottom: 48px; }
 .toimistot { margin-top: 56px; padding-top: 20px; border-top: 1px solid #333; color: #bdbdbd; }
+
+/* Lavakuvat Puhujana-osion yllä */
+.lavakuvat { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; background: var(--paperi); }
+.lavakuvat img { width: 100%; height: 100%; object-fit: cover; }
+.lavakuvat .iso { grid-column: 1 / -1; }
+.lavakuvat figcaption { grid-column: 1 / -1; padding-top: 10px; padding-bottom: 10px; font-size: 0.8rem; letter-spacing: 0.06em; color: var(--harmaa); }
