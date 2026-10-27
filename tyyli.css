@@ -206,8 +206,11 @@ footer a { color: var(--paperi); }
 .tilaa-johdanto { font-size: 1.3rem; max-width: 36em; margin-bottom: 48px; }
 .toimistot { margin-top: 56px; padding-top: 20px; border-top: 1px solid #333; color: #bdbdbd; }
 
-/* Lavakuvat Puhujana-osion yllä */
-.lavakuvat { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; background: var(--paperi); }
-.lavakuvat img { width: 100%; height: 100%; object-fit: cover; }
-.lavakuvat .iso { grid-column: 1 / -1; }
-.lavakuvat figcaption { grid-column: 1 / -1; padding-top: 10px; padding-bottom: 10px; font-size: 0.8rem; letter-spacing: 0.06em; color: var(--harmaa); }
+/* Lavakuvat Puhujana-osion yllä: ohut banneri */
+.lavakuvat { margin: 0; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4px; background: var(--paperi); }
+.lavakuvat img { width: 100%; height: clamp(120px, 16vw, 220px); object-fit: cover; object-position: center 35%; }
+.lavakuvat figcaption { grid-column: 1 / -1; padding-top: 8px; padding-bottom: 8px; font-size: 0.78rem; letter-spacing: 0.06em; color: var(--harmaa); }
+@media (max-width: 860px) {
+  .lavakuvat { grid-template-columns: 1fr 1fr; }
+  .lavakuvat .iso { grid-column: 1 / -1; }
+}
