@@ -209,18 +209,20 @@ footer a { color: var(--paperi); }
 /* Lavakuvat Puhujana-osion yllä: musta banneri, kuvat kokonaisina ja vähän vinossa */
 .lavakuvat {
   margin: 0; background: var(--muste); padding: 56px 16px 20px; overflow: hidden;
-  display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 28px;
+  display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 22px;
 }
 .lavakuvat img {
-  width: auto; height: clamp(110px, 17vw, 250px);
+  width: auto; height: clamp(100px, 12.5vw, 200px);
   border: 6px solid var(--paperi); box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
 }
 .lavakuvat img:nth-of-type(1) { transform: rotate(-2.5deg); }
-.lavakuvat .iso { height: clamp(140px, 22vw, 320px); transform: rotate(1.5deg); }
+.lavakuvat .iso { height: clamp(130px, 18vw, 290px); transform: rotate(1.5deg); }
 .lavakuvat img:nth-of-type(3) { transform: rotate(-1.5deg); }
+.lavakuvat .messu { transform: rotate(2deg); }
 .lavakuvat figcaption { flex-basis: 100%; text-align: center; margin-top: 18px; font-size: 0.78rem; letter-spacing: 0.06em; color: #9a9a9a; }
 @media (max-width: 860px) {
   .lavakuvat { gap: 18px 14px; padding-top: 36px; }
-  .lavakuvat img { height: 90px; border-width: 4px; }
+  .lavakuvat img { height: auto; width: 42%; border-width: 4px; }
   .lavakuvat .iso { order: -1; height: auto; width: 86%; }
 }
+
